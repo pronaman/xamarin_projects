@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AlertSamples.AlertList"
+             Title="List">
+
+    <ContentPage.Content>
+        <StackLayout Padding="5, 10">
+
+            <Label x:Name="lbl_chage" Text="이 글자를 잘 보세요." 
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+
+            <Button x:Name="click_bnt" Text="버튼을 누르세요" TextColor="White" BackgroundColor="DarkCyan"
+                    HeightRequest="100"
+                    Clicked="click_bnt_Clicked"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+
+            <Button x:Name="click_bnt_02" Text="버튼을 누르세요" TextColor="White" BackgroundColor="DarkCyan"
+                    HeightRequest="100"
+                    Clicked="click_bnt_02_Clicked"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

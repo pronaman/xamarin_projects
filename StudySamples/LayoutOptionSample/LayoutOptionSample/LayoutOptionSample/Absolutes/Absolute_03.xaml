@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutOptionSample.Absolutes.Absolute_03"
+             Title="AbsPage03">
+    
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Spacing="15" Padding="20">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="1번" FontSize="Medium"/>
+                <Label x:Name="lbl_01" Text="0.000" FontSize="Medium"/>
+                <Slider x:Name="sld_01"
+                        ValueChanged="sld_01_ValueChanged"
+                    HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="2번" FontSize="Medium"/>
+                <Label x:Name="lbl_02" Text="0.000" FontSize="Medium"/>
+                <Slider x:Name="sld_02"
+                        ValueChanged="sld_02_ValueChanged"
+                    HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="3번" FontSize="Medium"/>
+                <Label x:Name="lbl_03" Text="0.000" FontSize="Medium"/>
+                <Slider x:Name="sld_03"
+                        ValueChanged="sld_03_ValueChanged"
+                    HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="4번" FontSize="Medium"/>
+                <Label x:Name="lbl_04" Text="0.000" FontSize="Medium"/>
+                <Slider x:Name="sld_04"
+                        ValueChanged="sld_04_ValueChanged"
+                    HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <AbsoluteLayout>
+                <BoxView x:Name="tBoxView"
+                    Color="Blue" 
+                    AbsoluteLayout.LayoutBounds="1, 1, 1, 1" 
+                    AbsoluteLayout.LayoutFlags="All" 
+                    WidthRequest="400"
+                    HeightRequest="400"/>
+            </AbsoluteLayout>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+    
+</ContentPage>

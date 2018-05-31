@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BindingSamples.DefultBind.BindingXaml"
+             Title="Xaml">
+    
+    <StackLayout>
+        <Label Text="Binding Source Demo"
+               FontSize="Large"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Center"
+               Opacity="{Binding Source={x:Reference Name=slider1}, 
+                                 Path=Value}" />
+
+        <Slider x:Name="slider1"
+                VerticalOptions="CenterAndExpand" />
+
+        <Label Text="Opacity Binding Demo"
+               FontSize="Large"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Center"
+               BindingContext="{x:Reference Name=slider_opac}"
+               Opacity="{Binding Path=Value}" />
+
+        <Slider x:Name="slider_opac"
+                VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+    
+</ContentPage>

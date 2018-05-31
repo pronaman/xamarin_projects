@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutOptionSample.StackLayOuts.StackLayOutPage03"
+             Title="3 번">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Spacing="20">
+
+            <Label x:Name="lbl_HorizontalOptions" 
+                   Text="HorizontalOptions : Center" />
+            <Label x:Name="lbl_VerticalOptions"
+                   Text="VerticalOptions : Center" />
+
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btn_HorizontalOptions" 
+                        HeightRequest="40" 
+                        Text="HorizontalOptions" 
+                        Clicked="click_HorizontalOptions"/>
+                <Button x:Name="btn_VerticalOptions" 
+                        HeightRequest="40" 
+                        Text="VerticalOptions" 
+                        Clicked="click_VerticalOptions"/>
+            </StackLayout>
+
+            <BoxView x:Name="ChageBox"
+                     Color="Aqua" HeightRequest="70" WidthRequest="70" 
+                     HorizontalOptions="Center" VerticalOptions="Center" />
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

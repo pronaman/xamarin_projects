@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TextSample"
+             x:Class="TextSample.MainPage"
+             Title="Main">
+
+    <StackLayout>
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Button">
+                    <Setter Property="TextColor" Value="White" />
+                    <Setter Property="FontSize" Value="Large" />
+                    <Setter Property="BorderColor" Value="Black" />
+                    <Setter Property="BackgroundColor" Value="Black" />
+                    <Setter Property="HorizontalOptions" Value="Center" />
+                    <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                </Style>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+
+        <Button Text="Editor" 
+                StyleId="Editor"
+                Clicked="BtnClicked"/>
+
+        <Button Text="Entry" 
+                StyleId="Entry"
+                Clicked="BtnClicked"/>
+
+        <Button Text="Label" 
+                StyleId="Label"
+                Clicked="BtnClicked"/>
+
+        <Button Text="List" 
+                StyleId="List"
+                Clicked="BtnClicked"/>
+
+        <Button Text="Login" 
+                StyleId="Login"
+                Clicked="BtnClicked"/>
+
+        <Button Text="Order" 
+                StyleId="Order"
+                Clicked="BtnClicked"/>
+
+        <Button Text="Styles" 
+                StyleId="Styles"
+                Clicked="BtnClicked"/>
+
+    </StackLayout>
+
+</ContentPage>

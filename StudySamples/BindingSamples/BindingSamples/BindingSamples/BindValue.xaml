@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BindingSamples.BindValue"
+             x:Name="ShowPage"
+             Title="ShowV">
+
+    <StackLayout>
+
+        <StackLayout Orientation="Horizontal"
+                 Spacing="0"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+            <Label Text="{Binding Source={x:Reference ShowPage},
+                Path=Width,
+                StringFormat='{0:F0}'}" 
+                FontSize="Large"/>
+
+            <Label Text=" &#x00D7;"
+                   FontSize="Large"/>
+
+            <Label Text="{Binding Source={x:Reference ShowPage},
+                              Path=Height,
+                              StringFormat='{0:F0}'}" 
+                             FontSize="Large"/>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="{Binding Source={x:Reference slider},
+                                  Path=Value,
+                                  StringFormat='The Slider value is {0:F3}'}" />
+            <Slider x:Name="slider" />
+        </StackLayout>
+
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="{Binding Source={x:Reference entry},
+                                  Path=Text,
+                                  StringFormat='The Entry text is &#x201C;{0}&#x201D;'}" />
+            <Entry x:Name="entry" />
+        </StackLayout>
+
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="{Binding Source={x:Reference stepper},
+                                  Path=Value,
+                                  StringFormat='The Stepper value is {0}'}" />
+            <Stepper x:Name="stepper" />
+        </StackLayout>
+
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="{Binding Source={x:Reference switch},
+                                  Path=IsToggled,
+                                  StringFormat='The Switch value is {0}'}" />
+            <Switch x:Name="switch" />
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>

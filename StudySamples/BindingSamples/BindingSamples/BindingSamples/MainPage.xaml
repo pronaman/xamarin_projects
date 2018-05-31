@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BindingSamples"
+             x:Class="BindingSamples.MainPage">
+
+    <StackLayout>
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Button">
+                    <Setter Property="TextColor" Value="White" />
+                    <Setter Property="FontSize" Value="Large" />
+                    <Setter Property="BorderColor" Value="Black" />
+                    <Setter Property="BackgroundColor" Value="Black" />
+                    <Setter Property="HorizontalOptions" Value="Center" />
+                    <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                </Style>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+
+        <Button Text="DefultBind" 
+                StyleId="DefultBind"
+                Clicked="BtnClicked"/>
+
+        <Button Text="BindMode" 
+                StyleId="BindMode"
+                Clicked="BtnClicked"/>
+
+        <Button Text="BindPath" 
+                StyleId="BindPath"
+                Clicked="BtnClicked"/>
+
+        <Button Text="BindReverse" 
+                StyleId="BindReverse"
+                Clicked="BtnClicked"/>
+
+        <Button Text="BindValue" 
+                StyleId="BindValue"
+                Clicked="BtnClicked"/>
+
+        <Button Text="BindWebView" 
+                StyleId="BindWebView"
+                Clicked="BtnClicked"/>
+       
+    </StackLayout>
+    
+</ContentPage>

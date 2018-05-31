@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StylesSamples.Hierarchy.HierarchySample"
+             Style="{StaticResource HierarchyStylePage}"
+             Title="Hierarchy">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseHierarchyStyle" TargetType="View"
+                   BasedOn="{StaticResource HierarchyStylePage}">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Label"
+                        BasedOn="{StaticResource baseHierarchyStyle}">
+                    <Setter Property="TextColor" Value="Black" />
+                    <Setter Property="FontSize" Value="Large" />
+                </Style>
+
+                <Style TargetType="Button"
+                        BasedOn="{StaticResource baseHierarchyStyle}">
+                    <Setter Property="TextColor" Value="Blue" />
+                    <Setter Property="FontSize" Value="Large" />
+                    <Setter Property="BorderColor" Value="Blue" />
+                    <Setter Property="BorderWidth" Value="2" />
+                </Style>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+
+        <Button Text=" Carpe diem " />
+
+        <Label Text ="A bit of text" />
+
+        <Button Text=" Sapere aude " />
+
+        <Label Text ="Another bit of text" />
+
+        <Button Text=" Discere faciendo " />
+    </StackLayout>
+    
+</ContentPage>

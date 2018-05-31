@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutOptionSample.Relative.RelativePage02"
+             Title="Relative02">
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Spacing="15">
+
+            <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="relativeView">
+                <BoxView x:Name="chagebox"
+                         Color="SkyBlue"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor = 0.5}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor = 0.5}"
+                         RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent, Property=X, Factor = 0.5}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor = 0.5}" />
+            </RelativeLayout>
+            
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Width" FontSize="Medium"/>
+
+                <Slider x:Name="sld_01"
+                        ValueChanged="sld_01_ValueChanged"
+                        Maximum="500"
+                    HorizontalOptions="FillAndExpand"/>
+
+                <Label x:Name="lbl_width" Text="0.000" FontSize="Medium"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Height" FontSize="Medium"/>
+
+                <Slider x:Name="sld_02"
+                        Maximum="500"
+                        ValueChanged="sld_02_ValueChanged"
+                    HorizontalOptions="FillAndExpand"/>
+
+                <Label x:Name="lbl_Height" Text="0.000" FontSize="Medium"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="XCon" FontSize="Medium"/>
+
+                <Slider x:Name="sld_03"
+                        Maximum="500"
+                        ValueChanged="sld_03_ValueChanged"
+                    HorizontalOptions="FillAndExpand"/>
+
+                <Label x:Name="lbl_XCon" Text="0.000" FontSize="Medium"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="YCon" FontSize="Medium"/>
+
+                <Slider x:Name="sld_04"
+                        Maximum="500"
+                        ValueChanged="sld_04_ValueChanged"
+                    HorizontalOptions="FillAndExpand"/>
+
+                <Label x:Name="lbl_YCon" Text="0.000" FontSize="Medium"/>
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

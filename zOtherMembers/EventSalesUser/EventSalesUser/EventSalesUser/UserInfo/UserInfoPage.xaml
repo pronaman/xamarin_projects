@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:EventSalesUser"
+             x:Class="EventSalesUser.UserInfoPage"
+             Title="내 정보">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Sign Up"
+                     Command="{Binding IBtnLogin}"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding LoginStateStr}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button Text="로그인"
+                    WidthRequest="100"
+                    HeightRequest="50"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                    IsEnabled="{Binding LoginBtnState}"
+                    Command="{Binding IBtnLogin}"/>
+
+            <Button Text="회원가입"
+                    WidthRequest="100"
+                    HeightRequest="50"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                    IsEnabled="{Binding SingInBtnState}"/>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

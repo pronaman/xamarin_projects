@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MasterDetailSample"
+             x:Class="MasterDetailSample.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="BackgroundColor" Value="Black"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Button Text="Behaviors"
+                StyleId="Behaviors"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="NabiClicked"/>
+
+        <Button Text="Taps"
+                StyleId="Taps"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="NabiClicked"/>
+    </StackLayout>
+
+</ContentPage>

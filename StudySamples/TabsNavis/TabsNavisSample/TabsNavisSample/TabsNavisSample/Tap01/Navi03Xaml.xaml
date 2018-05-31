@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabsNavisSample.Navi03Xaml"
+             Title="Navi 03">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Navi 04"
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    Clicked="NaviPage_Clicked"/>
+
+            <Button Text="뒤로가기"
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    Clicked="Back_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

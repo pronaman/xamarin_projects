@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LayoutOptionSample"
+             x:Class="LayoutOptionSample.MainPage">
+
+    <StackLayout>
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Button">
+                    <Setter Property="TextColor" Value="White" />
+                    <Setter Property="FontSize" Value="Large" />
+                    <Setter Property="BorderColor" Value="Black" />
+                    <Setter Property="BackgroundColor" Value="Black" />
+                    <Setter Property="HorizontalOptions" Value="Center" />
+                    <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                </Style>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+
+        <Button Text="Alignment" 
+                StyleId="Alignment"
+                Clicked="BtnClicked"/>
+
+        <Button Text="Expansion" 
+                StyleId="Expansion"
+                Clicked="BtnClicked"/>
+
+        <Button Text="Relative" 
+                StyleId="Relative"
+                Clicked="BtnClicked"/>
+
+        <Button Text="Absolutes" 
+                StyleId="Absolutes"
+                Clicked="BtnClicked"/>
+
+        <Button Text="Grids" 
+                StyleId="Grids"
+                Clicked="BtnClicked"/>
+
+        <Button Text="StackLayOuts" 
+                StyleId="StackLayOuts"
+                Clicked="BtnClicked"/>
+        
+
+    </StackLayout>
+
+</ContentPage>

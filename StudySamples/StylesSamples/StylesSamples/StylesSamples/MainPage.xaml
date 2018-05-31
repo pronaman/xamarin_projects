@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StylesSamples;assembly=StylesSamples"
+             x:Class="StylesSamples.MainPage"
+             Title="Main">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="BackgroundColor" Value="Black"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Spacing="20">
+
+            <Button Text="NoStyles"
+                StyleId="NoStyles"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="BtnClicked"/>
+
+            <Button Text="Explicit"
+                StyleId="Explicit"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="BtnClicked"/>
+
+            <Button Text="Implicit"
+                StyleId="Implicit"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="BtnClicked"/>
+
+            <Button Text="Applicat"
+                StyleId="Applicat"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="BtnClicked"/>
+
+            <Button Text="Inheritance"
+                StyleId="Inheritance"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="BtnClicked"/>
+
+            <Button Text="DevicesStyles"
+                StyleId="DevicesStyles"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="BtnClicked"/>
+
+            <Button Text="Hierarchy"
+                StyleId="Hierarchy"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="BtnClicked"/>
+
+            <Button Text="DataResources"
+                StyleId="DataResources"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="BtnClicked"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

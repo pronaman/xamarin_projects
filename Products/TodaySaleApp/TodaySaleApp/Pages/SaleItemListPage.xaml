@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TodaySaleApp.Pages.SaleItemListPage"
+             xmlns:controls="clr-namespace:TodaySaleApp.Controls">
+    <!--<ContentView.Content>
+  </ContentView.Content>-->
+    <ScrollView>
+        <controls:SaleItemsWrapLayout x:Name="wrapLayout" Children="{Binding SaleItemList}"/>
+    </ScrollView>
+        
+        <!--<ListView ItemsSource="{Binding SaleItemList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid HorizontalOptions="Center">
+                        --><!--<Image Source="{Binding Image}" Margin="3"/>--><!--
+                        <Label Text="hi"/>
+                    </Grid>
+                </DataTemplate>
+             </ListView.ItemTemplate>
+        </ListView>-->
+</ContentView>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TodaySaleApp.Pages.SaleItemListPage"
+             xmlns:controls="clr-namespace:WYFoundation.Controls;assembly=WYFoundation">
+    <!--<ContentView.Content>
+  </ContentView.Content>-->
+    <ScrollView>
+        <controls:DynamicWrapLayout ItemsSource="{Binding SaleItemList}" x:Name="wrapLayout">
+            <controls:DynamicWrapLayout.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout BackgroundColor="Gray" WidthRequest="180" HeightRequest="180">
+                        <Image Source="{Binding .}" WidthRequest="180" HeightRequest="180"/>
+                    </StackLayout>
+                </DataTemplate>
+            </controls:DynamicWrapLayout.ItemTemplate>
+        </controls:DynamicWrapLayout>
+    </ScrollView>
+        
+        <!--<ListView ItemsSource="{Binding SaleItemList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid HorizontalOptions="Center">
+                        --><!--<Image Source="{Binding Image}" Margin="3"/>--><!--
+                        <Label Text="hi"/>
+                    </Grid>
+                </DataTemplate>
+             </ListView.ItemTemplate>D:\dev\XamarinProjects\Products\OnlyToday\OnlyToday\Pages\SaleItemListPage.xaml
+        </ListView>-->
+</ContentView>

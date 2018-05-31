@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AlertSamples"
+             x:Class="AlertSamples.MainPage"
+             Title="Main">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="BackgroundColor" Value="Black"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Button Text="Alert Await"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="AlertAwait_Clicked"/>
+
+        <Button Text="Alert Callbacks"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="AlertCallbacks_Clicked"/>
+
+        <Button Text="Alert Lambda"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="AlertLambda_Clicked"/>
+
+        <Button Text="Alert Nothing"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="AlertNothing_Clicked"/>
+
+        <Button Text="Alert List"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="AlertList_Clicked"/>
+
+        <Button Text="Alert Xaml"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="AlertXaml_Clicked"/>
+
+        <Button Text="Alert CS"
+                Style="{StaticResource buttonStyle}" 
+                Clicked="AlertCS_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

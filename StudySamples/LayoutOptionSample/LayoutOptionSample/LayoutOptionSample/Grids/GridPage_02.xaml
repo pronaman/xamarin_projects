@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutOptionSample.Grids.GridPage_02"
+             Title="Gird02">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="20" 
+                         HeightRequest="30">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="first row height: " 
+                           FontSize="Medium"/>
+                    
+                    <Slider Minimum=".1" 
+                            Maximum=".5" 
+                            x:Name="sliderHeight" 
+                            HorizontalOptions="FillAndExpand"
+                            ValueChanged="SliderHeight_ValueChanged"/>
+                </StackLayout>
+            </StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*" x:Name="firstRow" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                
+                <StackLayout x:Name="Box01" 
+                             BackgroundColor="Aqua" 
+                             Grid.Row="0" 
+                             Grid.Column="0" 
+                             BindingContext="{x:Reference Name=Box01}"  >
+                    <Label Text="{Binding Path=Width}" />
+                    <Label Text=" x " />
+                    <Label Text="{Binding Path=Height}" />
+                </StackLayout>
+
+                <StackLayout x:Name="Box02" 
+                             BackgroundColor="SkyBlue" 
+                             Grid.Row="0" 
+                             Grid.Column="1"
+                             BindingContext="{x:Reference Name=Box02}">
+                    <Label Text="{Binding Path=Width}" />
+                    <Label Text=" x " />
+                    <Label Text="{Binding Path=Height}" />
+                </StackLayout>
+
+                <StackLayout x:Name="Box03" 
+                             BackgroundColor="Gray" 
+                             Grid.Row="1" 
+                             Grid.Column="0" 
+                             BindingContext="{x:Reference Name=Box03}">
+                    <Label Text="{Binding Path=Width}" />
+                    <Label Text=" x " />
+                    <Label Text="{Binding Path=Height}" />
+                </StackLayout>
+
+                <StackLayout x:Name="Box04" 
+                             BackgroundColor="Green" 
+                             Grid.Row="1" 
+                             Grid.Column="1" 
+                             BindingContext="{x:Reference Name=Box04}">
+                    <Label Text="{Binding Path=Width}" />
+                    <Label Text=" x " />
+                    <Label Text="{Binding Path=Height}" />
+                </StackLayout>
+
+                <StackLayout x:Name="Box05" 
+                             BackgroundColor="Yellow" 
+                             Grid.Row="2" 
+                             Grid.Column="0" 
+                             BindingContext="{x:Reference Name=Box05}">
+                    <Label Text="{Binding Path=Width}" />
+                    <Label Text=" x " />
+                    <Label Text="{Binding Path=Height}" />
+                </StackLayout>
+
+                <StackLayout x:Name="Box06" 
+                             BackgroundColor="Purple" 
+                             Grid.Row="2" 
+                             Grid.Column="1" 
+                             BindingContext="{x:Reference Name=Box06}">
+                    <Label Text="{Binding Path=Width}" />
+                    <Label Text=" x " />
+                    <Label Text="{Binding Path=Height}" />
+                </StackLayout>
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

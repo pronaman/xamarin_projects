@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="WYDicomViewer.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WYDicomViewer.UWP"
+    RequestedTheme="Light">
+
+</Application>
