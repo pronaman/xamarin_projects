@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using WYFoundation.Mvvm;
 
-namespace TodaySaleApp.Pages
+namespace OnlyToday.Pages
 {
     class HomeTabbedPageModel : ViewModelBase
     {

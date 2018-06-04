@@ -33,6 +33,14 @@
 	<key>CFBundleName</key>
 	<string>OnlyToday</string>
 	<key>XSAppIconAssets</key>
-	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<string>Resources/Assets.xcassets/AppIcon.appiconset</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Resources/Assets.xcassets/LaunchImages.launchimage</string>
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>We are using your location</string>
+  <key>NSLocationAlwaysUsageDescription</key>
+  <string>Can we use your location</string>
+  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+  <string>Can we use your location at all times?</string>
 </dict>
 </plist>

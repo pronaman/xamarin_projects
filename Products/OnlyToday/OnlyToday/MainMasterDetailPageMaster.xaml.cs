@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace TodaySaleApp
+namespace OnlyToday
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainMasterDetailPageMaster : ContentPage

@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:pages="clr-namespace:TodaySaleApp.Pages"
-             x:Class="TodaySaleApp.Pages.HomeTabbedPage">
+            xmlns:pages="clr-namespace:OnlyToday.Pages"
+             x:Class="OnlyToday.Pages.HomeTabbedPage">
     <ContentPage Title="판매목록" >
-        <pages:SaleItemListPage x:Name="MasterPage" />
+        <pages:SaleItemListPage x:Name="xMasterPage" />
     </ContentPage>
-  <ContentPage Title="검색" />
+    <!--<ContentPage Title="검색" >-->
+    <pages:MapPage x:Name="xMapPage" Title="검색"/>
+    <!--</ContentPage>-->
   <ContentPage Title="즐겨찾기" />
 </TabbedPage>

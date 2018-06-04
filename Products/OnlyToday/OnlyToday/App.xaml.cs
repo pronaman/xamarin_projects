@@ -1,5 +1,5 @@
 using System;
-using TodaySaleApp;
+using OnlyToday;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

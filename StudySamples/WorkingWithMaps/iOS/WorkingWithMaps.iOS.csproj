@@ -137,7 +137,9 @@
     <BundleResource Include="Resources\glyphish_74_location.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Info.plist" />
+    <None Include="Info.plist">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Entitlements.plist" />
   </ItemGroup>
   <ItemGroup>

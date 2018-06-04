@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace TodaySaleApp.Pages
+namespace OnlyToday.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomeTabbedPage : TabbedPage

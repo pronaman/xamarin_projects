@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace TodaySaleApp.Pages
+namespace OnlyToday.Pages
 {
     class ImageList
     {

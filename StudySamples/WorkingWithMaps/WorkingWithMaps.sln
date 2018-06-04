@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithMaps", "WorkingWithMaps\WorkingWithMaps.csproj", "{E71C3604-F980-496D-A3EE-D2E757746E91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithMaps", "WorkingWithMaps\WorkingWithMaps.csproj", "{E71C3604-F980-496D-A3EE-D2E757746E91}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithMaps.iOS", "iOS\WorkingWithMaps.iOS.csproj", "{08A3ABD2-03CA-4A03-8C14-0E0680A77846}"
 EndProject
@@ -167,6 +167,7 @@ Global
 		{9E84F0D9-45C6-4FE7-9E9C-888F5A2446EA}.AppStore|x86.ActiveCfg = Release|Any CPU
 		{9E84F0D9-45C6-4FE7-9E9C-888F5A2446EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9E84F0D9-45C6-4FE7-9E9C-888F5A2446EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E84F0D9-45C6-4FE7-9E9C-888F5A2446EA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{9E84F0D9-45C6-4FE7-9E9C-888F5A2446EA}.Debug|ARM.ActiveCfg = Debug|Any CPU
 		{9E84F0D9-45C6-4FE7-9E9C-888F5A2446EA}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{9E84F0D9-45C6-4FE7-9E9C-888F5A2446EA}.Debug|iPhone.Build.0 = Debug|Any CPU
@@ -268,5 +269,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9AC63B6-F73F-4571-B0A3-FE90E71BFCCD}
 	EndGlobalSection
 EndGlobal

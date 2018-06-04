@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TodaySaleApp.Pages;
+using OnlyToday.Pages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace TodaySaleApp
+namespace OnlyToday
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainMasterDetailPage : MasterDetailPage
@@ -15,7 +15,7 @@ namespace TodaySaleApp
         public MainMasterDetailPage()
         {
             InitializeComponent();
-            MasterPage.ListView.ItemSelected += ListView_ItemSelected;
+            xMasterPage.ListView.ItemSelected += ListView_ItemSelected;
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -48,7 +48,7 @@ namespace TodaySaleApp
             //Detail = new NavigationPage(page);
             IsPresented = false;
 
-            MasterPage.ListView.SelectedItem = null;
+            xMasterPage.ListView.SelectedItem = null;
         }
     }
 }

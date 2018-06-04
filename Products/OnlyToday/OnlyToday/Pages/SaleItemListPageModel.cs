@@ -5,11 +5,11 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using TodaySaleApp.Models;
+using OnlyToday.Models;
 using WYFoundation.Mvvm;
 using Xamarin.Forms;
 
-namespace TodaySaleApp.Pages
+namespace OnlyToday.Pages
 {
     public class SaleItemListPageModel : ViewModelBase
     {
