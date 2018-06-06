@@ -11,27 +11,24 @@ using Xamarin.Forms;
 
 namespace OnlyToday.Pages
 {
-    public class SaleItemListPageModel : ViewModelBase
+    public class SaleItemViewModel : ViewModelBase
     {
-        private ObservableCollection<string> _items = new ObservableCollection<string>();
-
-        public ObservableCollection<string> Items
+        SaleItem _item;
+        public SaleItemViewModel(SaleItem item)
         {
-            get
-            {
-                return _items;
-            }
-
-            set
-            {
-                _items = value;
-                OnPropertyChanged(nameof(Items));
-            }
+            _item = item;
         }
 
-        private ObservableCollection<ImageSource> _saleItemList = new ObservableCollection<ImageSource>();
+        public ImageSource ItemImage {  get { return _item.ItemImage;  } }
+        public string Title {  get { return _item.Title;  } }
+        public string Description {  get { return _item.Description; } }
+    }
 
-        public ObservableCollection<ImageSource> SaleItemList
+    public class SaleItemListPageModel : ViewModelBase
+    {
+        private ObservableCollection<SaleItemViewModel> _saleItemList = new ObservableCollection<SaleItemViewModel>();
+
+        public ObservableCollection<SaleItemViewModel> SaleItemList
         {
             get { return _saleItemList; }
             set
@@ -44,20 +41,14 @@ namespace OnlyToday.Pages
 
         public SaleItemListPageModel()
         {
-            //_saleItemList.Add(new SaleItem());
-            //_saleItemList.Add(new SaleItem());
-            //_saleItemList.Add(new SaleItem());
-            //_saleItemList.Add(new SaleItem());
-            //_saleItemList.Add(new SaleItem());
-
           OnAppearing();
 
-            for (var i = 0; i < 40; i++)
-                SaleItemList.Add(i.ToString() + ".png");
+            //for (var i = 0; i < 40; i++)
+            //    SaleItemList.Add(i.ToString() + ".png");
 
-            for (var i = 0; i < 40; i++)
+            //for (var i = 0; i < 40; i++)
 
-                Items.Add(i.ToString());
+            //    Items.Add(i.ToString());
 
         }
 
@@ -65,12 +56,19 @@ namespace OnlyToday.Pages
         {
             var images = await GetImageListAsync();
 
-            ObservableCollection<ImageSource> saleItemList = new ObservableCollection<ImageSource>();
+            ObservableCollection<SaleItemViewModel> saleItemList = new ObservableCollection<SaleItemViewModel>();
+            int no = 1;
             foreach (var photo in images.Photos)
             {
                 string path = photo + string.Format("?width={0}&height={0}&mode=max",
                     Device.RuntimePlatform == Device.UWP ? 120 : 240);
-                saleItemList.Add(ImageSource.FromUri(new Uri(path)));
+                saleItemList.Add(new SaleItemViewModel(new SaleItem
+                {
+                    ItemImage = ImageSource.FromUri(new Uri(path)),
+                    Title = (no++).ToString(),
+                    //PriceDescription = 
+                    //Description = path                    
+                }));
 
                // saleItemList.Add(path);
             }
